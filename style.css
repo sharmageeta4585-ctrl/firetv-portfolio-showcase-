@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #11141a;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden; /* Prevent scrolling bars on TV screens */
+    width: 100vw;
+    height: 100vh;
+}
+.tv-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.sidebar {
+    width: 25%;
+    background-color: #1a1f2c;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar h2 {
+    color: #ff9900; /* Amazon Accent Color */
+    margin-bottom: 20px;
+}
+.nav-item {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    background-color: #252c3e;
+    transition: all 0.2s ease;
+}
+.main-content {
+    width: 75%;
+    padding: 40px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+.grid-item {
+    background-color: #1a1f2c;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    border: 3px solid transparent;
+}
+.grid-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+/* Crucial: The visual focus ring for the TV Remote control selector */
+.searchable.active {
+    border: 3px solid #ff9900 !important;
+    background-color: #ff9900;
+    color: #11141a;
+    transform: scale(1.05);
+}
